@@ -1,6 +1,13 @@
 var MAX = 16;
 
-document.getElementById("exponent").innerHTML = getNewExp();
+function check(e) {
+   if(e.keyCode === 13) {
+      checkAnswer();
+   }
+   if(e.keyCode == 39) {
+      reset();
+   }
+}
 
 function checkAnswer() {
    var input = document.getElementById("userInput").value;

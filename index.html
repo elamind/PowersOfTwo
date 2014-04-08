@@ -9,11 +9,12 @@
 </head>
 <body>
    <h1>Powers of Two</h1>
+   <p>Directions: Use the enter key to check your answer. Use the right arrow to change the question.</p>
 
    <p id="question"> 2<sup id = "exponent">0</sup></p>
 
-   <input id="userInput" type="text">
-   <input id="submit" type="button" value="Submit" onclick="checkAnswer()">
+   <input id="userInput" type="text" onkeydown="check(event)"> 
+   <input id="submit" type="button" value="Submit"  onclick="checkAnswer()">
    <input type="button" value="Next" onclick="reset()">
    <p id="answer"> </p>
 </html>
