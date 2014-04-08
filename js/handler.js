@@ -1,5 +1,7 @@
 var MAX = 16;
 
+document.getElementById("exponent").innerHTML = getNewExp();
+
 function checkAnswer() {
    var input = document.getElementById("userInput").value;
    var exp = document.getElementById("exponent").innerHTML;
