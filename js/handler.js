@@ -29,5 +29,5 @@ function reset() {
 }
 
 function getNewExp() {
-   return Math.floor(Math.random()*MAX);
+   return Math.floor(Math.random()*(MAX+1));
 }
