@@ -1,7 +1,7 @@
 var MAX = 16;
 
 function check(e) {
-   if(e.keyCode === 13) {
+   if(e.keyCode === 13 && !document.getElementById("submit").disabled) {
       checkAnswer();
    }
    if(e.keyCode === 39) {
