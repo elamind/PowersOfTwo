@@ -4,7 +4,7 @@ function check(e) {
    if(e.keyCode === 13) {
       checkAnswer();
    }
-   if(e.keyCode == 39) {
+   if(e.keyCode === 39) {
       reset();
    }
 }
