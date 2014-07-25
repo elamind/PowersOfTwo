@@ -1,7 +1,16 @@
 body {
    text-align: center;
+   background-color: #1D4E7C;
+   color: #619BD2;
 }
 
 #question {
    font-size: 400%;
+}
+
+#answer {
+   padding: 5px;
+   border-radius: 10px;
+   z-index:100;
+   color: #FFFFFF;
 }

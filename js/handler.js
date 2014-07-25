@@ -1,33 +1,42 @@
 var MAX = 16;
 
-function check(e) {
-   if(e.keyCode === 13) {
-      checkAnswer();
-   }
-   if(e.keyCode == 39) {
-      reset();
-   }
-}
-
 function checkAnswer() {
-   var input = document.getElementById("userInput").value;
-   var exp = document.getElementById("exponent").innerHTML;
+   var input = $("#userInput").val();
+   var exp = $("#exponent").html();
+
    if(input==Math.pow(2, exp)) {
-      document.getElementById("answer").innerHTML = "Correct!";
-      document.getElementById("submit").disabled = true;      
+      $("#answer").html("Correct!")
+         .css("background-color", "#44AA44")
+         .show().fadeOut(2000);
+      $("#submit").button("disable");
    }   
    else {
-      document.getElementById("answer").innerHTML = "Wrong. Try Again.";
+      $("#answer").html("Wrong. Try again.")
+         .css("background-color", "#AA4444")
+         .show().fadeOut(2000); 
    }
 }
 
 function reset() {
-   document.getElementById("exponent").innerHTML = getNewExp();
-   document.getElementById("userInput").value = "";
-   document.getElementById("answer").innerHTML = "";
-   document.getElementById("submit").disabled = false;
+   $("#exponent").html(getNewExp());
+   $("#userInput").empty();
+   $("#answer").empty();
+   $("#submit").button("enable");
 }
 
 function getNewExp() {
    return Math.floor(Math.random()*(MAX+1));
+}
+
+function setup() {
+   $("#userInput").keydown(function(e) {
+      if (e.which === 13)
+         checkAnswer();
+      if (e.which == 39)
+         reset();
+   });
+
+   $("#submit").button().click(checkAnswer);
+   $("#next").button().click(reset);
+   $("#exponent").html(getNewExp());
 }

@@ -2,19 +2,26 @@
 <html>
 <head>
    <title>Powers of Two</title>
-
+   <link rel="stylesheet" type="text/css" href="style/jquery-ui.theme.css">
    <link rel="stylesheet" type="text/css" href="style/main.css">
 
+   <!-- JQuery -->
+   <script src="JQuery/jquery.js"></script>
+   <script src="JQuery/jquery-ui.js"></script>
+
    <script src="js/handler.js"></script>
+   <script> 
+      $(setup);
+   </script>
 </head>
 <body>
    <h1>Powers of Two</h1>
    <p>Directions: Use the enter key to check your answer. Use the right arrow to change the question.</p>
 
    <p id="question"> 2<sup id = "exponent">0</sup></p>
-
-   <input id="userInput" type="text" onkeydown="check(event)"> 
-   <input id="submit" type="button" value="Submit"  onclick="checkAnswer()">
-   <input type="button" value="Next" onclick="reset()">
-   <p id="answer"> </p>
+   <span id="answer"> </span>
+   <br />
+   <input id="userInput" type="text">
+   <input id="submit" value="Submit" type="button">
+   <input id="next" value="Next" type="button">
 </html>
