@@ -13,14 +13,13 @@ function checkAnswer() {
    else {
       $("#answer").html("Wrong. Try again.")
          .css("background-color", "#AA4444")
-         .show().fadeOut(1500); 
+         .show().fadeOut(1000, "easeInSine"); 
    }
 }
 
 function reset() {
    $("#exponent").html(getNewExp());
    $("#userInput").empty();
-   //$("#answer").empty();
    $("#submit").button("enable");
 }
 
