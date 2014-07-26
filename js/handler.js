@@ -19,7 +19,8 @@ function checkAnswer() {
 
 function reset() {
    $("#exponent").html(getNewExp());
-   $("#userInput").empty();
+   $("#userInput").val("");
+   console.log("Here!");
    $("#submit").button("enable");
 }
 
