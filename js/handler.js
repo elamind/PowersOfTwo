@@ -7,13 +7,13 @@ function checkAnswer() {
    if(input==Math.pow(2, exp)) {
       $("#answer").html("Correct!")
          .css("background-color", "#44AA44")
-         .show().fadeOut(2000);
+         .show().fadeOut(1500);
       $("#submit").button("disable");
    }   
    else {
       $("#answer").html("Wrong. Try again.")
          .css("background-color", "#AA4444")
-         .show().fadeOut(2000); 
+         .show().fadeOut(1500); 
    }
 }
 
