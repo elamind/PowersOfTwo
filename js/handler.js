@@ -4,7 +4,7 @@ function checkAnswer() {
    var input = $("#userInput").val();
    var exp = $("#exponent").html();
 
-   if (input==Math.pow(2, exp)) {
+   if (input === Math.pow(2, exp)) {
       $("#answer").html("Correct!")
          .css("background-color", "#44AA44")
          .show().fadeOut(1500);
@@ -32,7 +32,7 @@ function setup() {
    $("#userInput").keydown(function(e) {
       if (e.which === 13)
          checkAnswer();
-      if (e.which == 39)
+      if (e.which === 39)
          reset();
    });
 
